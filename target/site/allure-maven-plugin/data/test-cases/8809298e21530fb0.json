@@ -1,0 +1,87 @@
+{
+  "uid" : "8809298e21530fb0",
+  "name" : "testLoginWithWrongCredentials",
+  "fullName" : "tests.UserLoginTests.testLoginWithWrongCredentials",
+  "historyId" : "236c60ac335479b796dddec0b079a45b",
+  "time" : {
+    "start" : 1709558700759,
+    "stop" : 1709558701041,
+    "duration" : 282
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Attempt to login with wrong credentials",
+      "time" : {
+        "start" : 1709558700759,
+        "stop" : 1709558701040,
+        "duration" : 281
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "wrong_email@example.com"
+      }, {
+        "name" : "password",
+        "value" : "wrong_password"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.UserLoginTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testLoginWithWrongCredentials"
+  }, {
+    "name" : "suite",
+    "value" : "tests.UserLoginTests"
+  }, {
+    "name" : "host",
+    "value" : "Alexeys-MBP"
+  }, {
+    "name" : "thread",
+    "value" : "20331@Alexeys-MBP.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8809298e21530fb0.json",
+  "parameterValues" : [ ]
+}
