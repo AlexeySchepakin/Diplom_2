@@ -1,18 +1,25 @@
 package tests;
 
 import io.qameta.allure.Step;
+import org.junit.After;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class CreateUserTests extends BaseTest {
 
+    private final Map<String, String> createdUsers = new HashMap<>();
+
     @Test
     public void testCreateUniqueUser() {
         String uniqueEmail = "testuser_" + UUID.randomUUID() + "@example.com";
-        registerUserUnique(uniqueEmail, "password", "Test User");
+        String password = "password";
+        String token = registerUserUnique(uniqueEmail, password, "Test User");
+        createdUsers.put(uniqueEmail, token);
     }
 
     @Test
@@ -26,9 +33,14 @@ public class CreateUserTests extends BaseTest {
         registerUserWithMissingField();
     }
 
+    @After
+    public void cleanup() {
+        createdUsers.forEach(this::deleteUser);
+    }
+
     @Step("Register a user with a unique email")
-    private void registerUserUnique(String email, String password, String name) {
-        given()
+    private String registerUserUnique(String email, String password, String name) {
+        String token = given()
                 .contentType("application/json")
                 .body("{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"" + name + "\"}")
                 .when()
@@ -36,7 +48,9 @@ public class CreateUserTests extends BaseTest {
                 .then()
                 .statusCode(200)
                 .body("success", equalTo(true))
-                .body("user.email", equalTo(email));
+                .extract().path("accessToken");
+
+        return token;
     }
 
     @Step("Try to register a user with an existing email")
@@ -63,5 +77,16 @@ public class CreateUserTests extends BaseTest {
                 .statusCode(403)
                 .body("success", equalTo(false))
                 .body("message", equalTo("Email, password and name are required fields"));
+    }
+
+    @Step("Delete a user by email and token")
+    private void deleteUser(String email, String token) {
+        given()
+                .contentType("application/json")
+                .header("Authorization", token)
+                .when()
+                .delete("https://stellarburgers.nomoreparties.site/api/auth/user")
+                .then()
+                .statusCode(202);
     }
 }

@@ -2,8 +2,10 @@ package tests;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -18,6 +20,11 @@ public class UpdateUserTest extends BaseTest {
     public void setUp() {
         createUser();
         loginUser();
+    }
+
+    @After
+    public void tearDown() {
+        deleteUser();
     }
 
     @Test
@@ -60,6 +67,16 @@ public class UpdateUserTest extends BaseTest {
                 .post("/api/auth/login");
 
         token = response.jsonPath().getString("accessToken");
+    }
+
+    @Step("Delete user")
+    private void deleteUser() {
+        given()
+                .header("Authorization", token)
+                .when()
+                .delete("/api/auth/user")
+                .then()
+                .statusCode(202);
     }
 
     @Step("Update user name with authorization")
