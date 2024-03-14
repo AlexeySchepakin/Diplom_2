@@ -1,0 +1,84 @@
+{
+  "uid" : "9033c6ac06bd6a76",
+  "name" : "getOrderForAuthorizedUser",
+  "fullName" : "tests.OrderTests.getOrderForAuthorizedUser",
+  "historyId" : "ee887c6b6e7b289e01bfa7ad3a341706",
+  "time" : {
+    "start" : 1709558704902,
+    "stop" : 1709558705448,
+    "duration" : 546
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Get order for authorized user",
+      "time" : {
+        "start" : 1709558705162,
+        "stop" : 1709558705447,
+        "duration" : 285
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTU3OWYwOWVkMjgwMDAxYjNjMWFjNiIsImlhdCI6MTcwOTU1ODcwNSwiZXhwIjoxNzA5NTU5OTA1fQ.omO9JPTuGpmE9ZN7rfIxqVEAlt7bb8LPfdP7zSCax14"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.OrderTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "getOrderForAuthorizedUser"
+  }, {
+    "name" : "suite",
+    "value" : "tests.OrderTests"
+  }, {
+    "name" : "host",
+    "value" : "Alexeys-MBP"
+  }, {
+    "name" : "thread",
+    "value" : "20331@Alexeys-MBP.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9033c6ac06bd6a76.json",
+  "parameterValues" : [ ]
+}

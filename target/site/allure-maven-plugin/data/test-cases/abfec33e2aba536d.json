@@ -1,0 +1,84 @@
+{
+  "uid" : "abfec33e2aba536d",
+  "name" : "createOrderWithoutIngredients",
+  "fullName" : "tests.OrderTests.createOrderWithoutIngredients",
+  "historyId" : "fe35b993cb997ff0bb8f5ab3cab85439",
+  "time" : {
+    "start" : 1709558706604,
+    "stop" : 1709558707041,
+    "duration" : 437
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Create order without ingredients",
+      "time" : {
+        "start" : 1709558706879,
+        "stop" : 1709558707040,
+        "duration" : 161
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTU3OWYwOWVkMjgwMDAxYjNjMWFjNiIsImlhdCI6MTcwOTU1ODcwNywiZXhwIjoxNzA5NTU5OTA3fQ.C-gFvERCgBYr1TI3G6ELsnV60vlx9ZanZ4Hg4Io2RYc"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.OrderTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "createOrderWithoutIngredients"
+  }, {
+    "name" : "suite",
+    "value" : "tests.OrderTests"
+  }, {
+    "name" : "host",
+    "value" : "Alexeys-MBP"
+  }, {
+    "name" : "thread",
+    "value" : "20331@Alexeys-MBP.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "abfec33e2aba536d.json",
+  "parameterValues" : [ ]
+}
